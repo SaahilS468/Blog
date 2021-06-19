@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/nav + footer/navbar.css"> 
+    <link rel="stylesheet" href="/nav + footer/footer.css">  -->
+	<link rel="stylesheet" href="./homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>405 FOUND</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="check-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <label class="logo">405 FOUND</label>
+        <ul>
+            <li> <a class="nav-elements" href="#">HOME</a> </li>
+            <li> <a class="nav-elements" href="#">About</a> </li>
+            <li> <a class="nav-elements" href="#">Services</a> </li>
+            <li> <a class="nav-elements" href="#">Contact</a> </li>
+            <li> <a class="nav-elements" href="#">Feedback</a> </li>
+        </ul>
+    </nav>
+
+
+	<form action="/logout" method="POST">
+		<button type="submit" class="logout">Logout</button>
+	</form>
+
+	<div class="columns">
+            <div class="col">
+				<h5>Name</h5>
+				<h5>No. of Blogs</h5>
+			</div>
+            <div class="col">
+                <form action="/newfeed" method="POST">
+                    <div class="newsfeed">
+                        <div class="newfeed-input">
+                            <input class="input fw-bolder" type="text" placeholder="Whats in your head" name="newpost" >
+                        </div>
+						<button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+							<path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+						  </svg></button>
+                    </div>
+                </form>
+				<% feeds.forEach(feed => { %> 
+				<ul class="feed">
+					<li class="feed-list">
+						<p><%= feed.newpost %></p>
+						<div class="editdelete-btn">
+						<a href="/feededit/<%= feed._id%>">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+								<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+								<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+							  </svg>
+						</a>
+						<form action="/feedDelete/<%= feed._id %>" method="POST">
+							<a href="">
+							<button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+							  </svg></button>
+						    </a>
+						</form>
+					</div>
+					</li>
+				</ul>
+				<%})%>
+            </div>     
+	</div>
+
+
+
+
+
+<!-- //Footer -->
+    <div class="main-wrap">
+		<div class="footer-wrap">
+			<div class="footer-wrap-1">
+				<div class="footer-section">
+					<h1>About</h1>
+					<a href="#">Services</a>
+					<a href="#">Portfolio</a>
+					<a href="#">Pricing</a>
+					<a href="#">Careers</a>
+				</div>
+				<div class="footer-section">
+					<h1>Resources</h1>
+					<a href="#">Docs</a>
+					<a href="#">Blog</a>
+					<a href="#">eBooks</a>
+					<a href="#">Videos</a>
+				</div>
+				<div class="footer-section">
+					<h1>Contact</h1>
+					<a href="#">Help</a>
+					<a href="#">Sales</a>
+					<a href="#">Advertise</a>
+				</div>
+				<div class="footer-section">
+					<h1>Stay Connected!</h1>
+					<p>Subscribe to our newsletter to receive latest news.</p>
+					<form action="">
+						<input type="email" name="email" id="email" placeholder="Enter Email Address">
+						<button type="submit" class="btn">Subscribe</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer-wrap-2">
+				<div class="line"></div>
+				
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="first-box">
+				<a href="#">Terms & Conditions</a>
+				<a href="#">Privacy Policy</a>
+			</div>
+			<div class="last-box">
+				<a href="#"> Copyright 2021 405 FOUND. Inc</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

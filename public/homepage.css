@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+button{
+    border: none;
+    background-color: #fffdd0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family:sans-serif;
+}
+
+nav{
+    background: rgba(25, 16, 150, 0.781);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+label.logo{
+   color:#fff;
+   font-size: 35px;
+   line-height: 80px;
+   padding: 0px 100px;
+   font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 4px;
+}
+
+a.nav-elements:hover{
+ background: lightblue;
+ transition: 0.3s;
+}
+
+.check-btn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height:80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding: 50px;
+    }
+
+    nav ul li a{
+     font-size: 16px;
+
+    }
+}
+
+
+
+
+.logout{
+        margin-left: 1100px;
+        margin-top: 6em;
+        margin-bottom: 2em;
+        font-size: 1.1em;
+        color: white;
+        background-color: rgba(25, 16, 150, 0.781);
+        border: none;
+        padding: 0.5em 1.6em;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+}
+
+
+
+
+/* Main Content */
+.columns{
+    text-align: center;
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns > *:nth-child(1){ 
+    flex: 1 1 30%;
+}
+
+.columns > *:nth-child(2){
+    flex: 1 1 70%;
+}
+
+.input{
+    padding: 10px 60px;
+    border-radius: 25px;
+}
+
+.newfeed-input{
+    display: inline-block;
+    margin-left: -300px;
+}
+
+
+
+.editdelete-btn{
+    margin-left: 600px;
+    border: none;
+}
+
+.feed{
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.feed-list{
+    display: flex;
+    border: 2px solid black;
+    background-color: #fffdd0;
+    padding: 10px;
+}
+
+
+
+
+/* Footer section */
+.main-wrap{
+    margin-bottom: 0;
+    width: 100%;
+    background: #fff;
+    color: #fff;
+}
+.footer-wrap{
+    position: relative;
+    margin-top:479px;
+    width:100%;
+    padding:40px;
+    background: rgb(46, 44, 44);
+}
+.footer-wrap-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-wrap-1 > * {
+    flex: 1 1 10em;
+}
+
+.footer-section>a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+
+
+/* .footer-section{
+    width:22%;
+    display:block;
+    padding:10px 35px;
+}
+.footer-section:last-of-type{
+    width:34%;
+}
+.footer-section p{
+    color:#fff;
+    font-size: 16px;
+}
+.footer-section h1{
+    font-size:22px;
+    color:#fff;
+    margin-bottom:8px;
+}
+.footer-section a{
+    color:#fff;
+    display: block;
+    text-decoration: none;
+    padding:4px 0px;
+}
+form{
+    position:relative;
+}
+form input{
+    position:absolute;
+    height:35px;
+    width: 220px;
+    margin:8px 0px;
+    border:none;
+    outline:none;
+    padding:6px;
+    font-size:14px;
+}
+form .btn{
+    height:35px;
+    background:rgb(79, 156, 69);
+    border:none;
+    padding:0px 6px;
+    margin:8px 0px;
+    position:absolute;
+    left:60%;
+    font-weight: 600;
+    cursor: pointer;
+    color:#fff;
+}*/
+.btn:hover{
+    background: rgb(107,204,94);
+} 
+.line{
+    margin-top:20px;
+    width:100%;
+    height:1px;;
+    background: rgb(143, 142, 142);
+}
+.social-link{
+    padding-top:25px;
+    text-align: center;
+}
+.social-link a{
+    text-decoration: none;
+    height:26px;
+    display: inline-block;
+    width:26px;
+    padding:5px;
+    border-radius:20px;
+    margin:5px;
+    background: rgb(224, 222, 222);
+}
+.social-link a img{
+    width:14px;
+    height:14px;
+}
+.footer-bottom{
+    background: rgb(12, 12, 12);
+    width:100%;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom a{
+    color:#fff;
+    font-size:14px;
+    margin-left:20px;
+    text-decoration:none;
+}
+.first-box{
+    margin-left: 20px;
+}
+.last-box{
+    margin-right:20px;
+}
+
+
+
